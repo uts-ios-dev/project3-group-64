@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2C051DD20B13B7F00726BDF /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C051DC20B13B7F00726BDF /* ExpensesViewController.swift */; };
+		F2C051DF20B13BB200726BDF /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C051DE20B13BB200726BDF /* AddExpenseViewController.swift */; };
+		F2C051E120B13BD200726BDF /* ExpenseListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C051E020B13BD200726BDF /* ExpenseListTableViewController.swift */; };
 		F2C6281420A919CF006AFFA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6281320A919CE006AFFA1 /* AppDelegate.swift */; };
 		F2C6281620A919CF006AFFA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6281520A919CF006AFFA1 /* ViewController.swift */; };
 		F2C6281920A919D0006AFFA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C6281720A919D0006AFFA1 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F2C051DC20B13B7F00726BDF /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
+		F2C051DE20B13BB200726BDF /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		F2C051E020B13BD200726BDF /* ExpenseListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListTableViewController.swift; sourceTree = "<group>"; };
 		F2C6281020A919CD006AFFA1 /* StudentOrganiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentOrganiser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C6281320A919CE006AFFA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2C6281520A919CF006AFFA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,9 @@
 				F2C6281A20A919D3006AFFA1 /* Assets.xcassets */,
 				F2C6281C20A919D3006AFFA1 /* LaunchScreen.storyboard */,
 				F2C6281F20A919D3006AFFA1 /* Info.plist */,
+				F2C051DC20B13B7F00726BDF /* ExpensesViewController.swift */,
+				F2C051DE20B13BB200726BDF /* AddExpenseViewController.swift */,
+				F2C051E020B13BD200726BDF /* ExpenseListTableViewController.swift */,
 			);
 			path = StudentOrganiser;
 			sourceTree = "<group>";
@@ -260,7 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2C6281620A919CF006AFFA1 /* ViewController.swift in Sources */,
+				F2C051E120B13BD200726BDF /* ExpenseListTableViewController.swift in Sources */,
+				F2C051DF20B13BB200726BDF /* AddExpenseViewController.swift in Sources */,
 				F2C6281420A919CF006AFFA1 /* AppDelegate.swift in Sources */,
+				F2C051DD20B13B7F00726BDF /* ExpensesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

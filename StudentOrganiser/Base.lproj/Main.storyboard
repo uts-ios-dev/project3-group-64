@@ -66,11 +66,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yU-6n-Uc9">
-                                <rect key="frame" x="149" y="33" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -213,10 +208,10 @@
             </objects>
             <point key="canvasLocation" x="1860" y="640.92953523238384"/>
         </scene>
-        <!--View Controller-->
+        <!--Expenses View Controller-->
         <scene sceneID="mcg-m7-PVq">
             <objects>
-                <viewController id="VRx-mc-DeO" sceneMemberID="viewController">
+                <viewController id="VRx-mc-DeO" customClass="ExpensesViewController" customModule="StudentOrganiser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wS9-F9-EMb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,10 +305,10 @@
             </objects>
             <point key="canvasLocation" x="-220" y="640.92953523238384"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Expense View Controller-->
         <scene sceneID="vZ3-zb-5aD">
             <objects>
-                <viewController id="zYt-fs-pyk" sceneMemberID="viewController">
+                <viewController id="zYt-fs-pyk" customClass="AddExpenseViewController" customModule="StudentOrganiser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fpi-i4-hsL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -662,10 +657,10 @@
             </objects>
             <point key="canvasLocation" x="2700" y="640.92953523238384"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Expense List Table View Controller-->
         <scene sceneID="sDn-hC-pjE">
             <objects>
-                <tableViewController id="Thc-Jc-cvg" sceneMemberID="viewController">
+                <tableViewController id="Thc-Jc-cvg" customClass="ExpenseListTableViewController" customModule="StudentOrganiser" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2io-db-qWJ">
                         <rect key="frame" x="0.0" y="0.0" width="318" height="379"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -696,8 +691,8 @@
         <segue reference="hM2-DG-OUk"/>
         <segue reference="BfO-xN-FGi"/>
         <segue reference="ccM-Z4-JRS"/>
-        <segue reference="vXB-he-0Vm"/>
-        <segue reference="zeW-dT-lfP"/>
-        <segue reference="46M-zf-44O"/>
+        <segue reference="2vb-7n-1F1"/>
+        <segue reference="biW-RT-YZe"/>
+        <segue reference="8sK-OW-cQd"/>
     </inferredMetricsTieBreakers>
 </document>
