@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  StudentOrganiser
 //
-//  Created by Nick Haeusler on 14/5/18.
+//  Created by Group 64 on 14/5/18.
 //  Copyright © 2018 Jacob Brennan. All rights reserved.
 //
 
