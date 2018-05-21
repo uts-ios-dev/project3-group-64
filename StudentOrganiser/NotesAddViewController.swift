@@ -10,30 +10,53 @@ import UIKit
 
 class NotesAddViewController: UIViewController {
 
+    @IBOutlet weak var noteTitle: UITextField!
+    @IBOutlet weak var noteBody: UITextView!
+    
+     var noteTitles:[String] = []
+     var noteBodys:[String] = []
+    
+    let userDefaults = Foundation.UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if userDefaults.stringArray(forKey: "noteTitels") != nil {
+            noteTitles = userDefaults.stringArray(forKey: "noteTitles")!
+        }
+        
+        if userDefaults.stringArray(forKey: "noteBodys") != nil {
+            noteBodys = userDefaults.stringArray(forKey: "noteBodys")!
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
+    
+    @IBAction func AddNote(_ sender: UIButton) {
+       
+        let title = noteTitle.text!
+        let body = noteBody.text!
+        
+        //print("Title: \(title)")
+        noteTitles.append(title)
+        noteBodys.append(body)
+        
+        print("titles \(noteTitles[0])")
+        userDefaults.set(noteTitles, forKey: "noteTitles")
+        userDefaults.set(noteBodys, forKey: "noteBodys")
+      
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     @IBAction func BackButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
         
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
