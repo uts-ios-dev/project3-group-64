@@ -35,9 +35,9 @@ class AddExpenseViewController: UIViewController {
     @IBAction func saveButton(_ sender: UIButton) {
         let userDefaults = Foundation.UserDefaults.standard
         
-        let expenseName: String = expenseNameTextField.text!
-        let expenseCost: String = expenseCostTextField.text!
-        let expenseDate: String = dateChanged(expenseDatePicker)
+        let expenseName: [String] = [expenseNameTextField.text!]
+        let expenseCost: [String] = [expenseCostTextField.text!]
+        let expenseDate: [String] = [dateChanged(expenseDatePicker)]
         
         userDefaults.set(expenseName, forKey: "expenseName")
         userDefaults.set(expenseCost, forKey: "expenseCost")

@@ -19,8 +19,14 @@ class ExpenseListTableViewController: UITableViewController {
         
         if expenseName.count != 0 {
             setValues()
+            print(expenseName)
         }
-        
+//        } else if expenseName.count == 0 {
+//
+//        }
+        //setValues()
+        print(expenseName)
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,8 +41,8 @@ class ExpenseListTableViewController: UITableViewController {
         //highscoreArray = userDefaults.array(forKey: "Record")! as! [Int]
         //usernameArray = userDefaults.stringArray(forKey: "UserName")!
         
-        expenseName = userDefaults.stringArray(forKey: "expenseName")!
-        expenseCost = userDefaults.stringArray(forKey: "expenseCost")!
+        expenseName = userDefaults.stringArray(forKey: "expenseName") ?? [String]()
+        expenseCost = userDefaults.stringArray(forKey: "expenseCost") ?? [String]()
         expenseDate = userDefaults.stringArray(forKey: "expenseDate")!
 
     }
