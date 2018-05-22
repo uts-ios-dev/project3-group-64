@@ -40,12 +40,10 @@ class NotesAddViewController: UIViewController {
        
         let title = noteTitle.text!
         let body = noteBody.text!
-        
-        //print("Title: \(title)")
+     
         noteTitles.append(title)
         noteBodys.append(body)
         
-        print(noteBodys.count)
         userDefaults.set(noteTitles, forKey: "noteTitles")
         userDefaults.set(noteBodys, forKey: "noteBodys")
       

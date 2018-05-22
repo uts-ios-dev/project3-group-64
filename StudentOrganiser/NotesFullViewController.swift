@@ -24,13 +24,7 @@ class NotesFullViewController: UIViewController {
         
         titleLabel.text = noteTitles[index]
         bodyField.text = noteBodys[index]
-        
-        for i in 0...noteBodys.count-1 {
-            print("index \(i) : \(noteBodys[i])")
-        }
-        
-        // Do any additional setup after loading the view.
-    }
+            }
     
     func getData(){
         if userDefaults.stringArray(forKey: "noteTitles") != nil {

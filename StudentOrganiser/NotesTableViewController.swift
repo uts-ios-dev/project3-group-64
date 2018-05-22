@@ -29,15 +29,8 @@ class NotesTableViewController: UITableViewController {
             noteTitles = userDefaults.stringArray(forKey: "noteTitles")!
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
-            print(noteTitles.count)
-        }else{
-       
-            print("nope")
         }
         
-//        noteTitles.append("Dummy Note one")
-//        noteTitles.append("Dummy Note two")
-//        noteTitles.append("Dummy Note three")
     }
     
     override func didReceiveMemoryWarning() {
@@ -65,15 +58,13 @@ class NotesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //prints out 0,1,2
-        print("section: \(indexPath.section)")
         let index = indexPath.section
         userDefaults.set(index, forKey: "index")
         
 
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "newViewController")
-        //self.dismiss(animated: true, completion: nil)
+
         self.present(newViewController, animated: true, completion: nil)
     }
     
