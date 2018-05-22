@@ -380,6 +380,9 @@
                                 <rect key="frame" x="272" y="61" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveBudget:" destination="VRx-mc-DeO" eventType="touchUpInside" id="iRT-TO-Rka"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -393,6 +396,11 @@
                         </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="budgetTextField" destination="KWh-fA-Gbq" id="gqi-hA-Xyf"/>
+                        <outlet property="expensesLabel" destination="uvQ-rY-Wwe" id="Q2Y-a7-tsa"/>
+                        <outlet property="fundsLeftLabel" destination="8hv-3P-LfD" id="mms-1i-8cZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nYm-FB-HxH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

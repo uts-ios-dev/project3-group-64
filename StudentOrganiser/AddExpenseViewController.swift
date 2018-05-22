@@ -65,6 +65,12 @@ class AddExpenseViewController: UIViewController {
         userDefaults.set(expenseCost, forKey: "expenseCost")
         userDefaults.set(expenseDate, forKey: "expenseDate")
         
+        if cost != "" {
+            let costDouble: Double = Double(expenseCostTextField.text!)!
+            userDefaults.set(costDouble, forKey: "cost")
+        }
+        
+        
     }
     
 }
