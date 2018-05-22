@@ -21,7 +21,7 @@ class NotesAddViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if userDefaults.stringArray(forKey: "noteTitels") != nil {
+        if userDefaults.stringArray(forKey: "noteTitles") != nil {
             noteTitles = userDefaults.stringArray(forKey: "noteTitles")!
         }
         
@@ -45,7 +45,7 @@ class NotesAddViewController: UIViewController {
         noteTitles.append(title)
         noteBodys.append(body)
         
-        print("titles \(noteTitles[0])")
+        print(noteBodys.count)
         userDefaults.set(noteTitles, forKey: "noteTitles")
         userDefaults.set(noteBodys, forKey: "noteBodys")
       

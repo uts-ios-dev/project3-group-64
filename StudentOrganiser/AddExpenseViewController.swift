@@ -14,10 +14,27 @@ class AddExpenseViewController: UIViewController {
     @IBOutlet weak var expenseCostTextField: UITextField!
     @IBOutlet weak var expenseDatePicker: UIDatePicker!
     
+    
+    //Putting your variables up here so I can access them from both viewdidload and savebutton
+    var expenseName: [String] = []
+    var expenseCost: [String] = []
+    var expenseDate: [String] = []
+    let userDefaults = Foundation.UserDefaults.standard
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //Gets the arrays data only if they have data in it. This makes sure youre adding to the saved data rather than rewriting it.
+        if userDefaults.stringArray(forKey: "expenseName") != nil {
+            expenseName = userDefaults.stringArray(forKey: "expenseName")!
+        }
+        
+        if userDefaults.stringArray(forKey: "expenseCost") != nil {
+            expenseCost = userDefaults.stringArray(forKey: "expenseCost")!
+        }
+        
+        if userDefaults.stringArray(forKey: "expenseDate") != nil {
+            expenseDate = userDefaults.stringArray(forKey: "expenseDate")!
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,12 +50,17 @@ class AddExpenseViewController: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
-        let userDefaults = Foundation.UserDefaults.standard
+      
+        //I dont know why but you have to do it like this. Seperately.
+        let name = expenseNameTextField.text!
+        let cost = expenseCostTextField.text!
+        let date = dateChanged(expenseDatePicker)
         
-        let expenseName: [String] = [expenseNameTextField.text!]
-        let expenseCost: [String] = [expenseCostTextField.text!]
-        let expenseDate: [String] = [dateChanged(expenseDatePicker)]
-        
+        //Appending instead of setting the fist value.
+        expenseName.append(name)
+        expenseCost.append(cost)
+        expenseDate.append(date)
+       
         userDefaults.set(expenseName, forKey: "expenseName")
         userDefaults.set(expenseCost, forKey: "expenseCost")
         userDefaults.set(expenseDate, forKey: "expenseDate")

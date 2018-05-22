@@ -17,7 +17,7 @@ class NotesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //getTitles()
+        getTitles()
         //print("view did load")// NOT LOADING VIEW EACH TIME IT OPENS
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -27,6 +27,8 @@ class NotesTableViewController: UITableViewController {
     func getTitles() {
         if userDefaults.stringArray(forKey: "noteTitles") != nil {
             noteTitles = userDefaults.stringArray(forKey: "noteTitles")!
+            self.tableView.reloadData()
+            self.refreshControl?.endRefreshing()
             print(noteTitles.count)
         }else{
        
@@ -55,7 +57,7 @@ class NotesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "noteTitleCell", for: indexPath)
 
         let title = noteTitles[indexPath.section]
-
+        
 
        cell.textLabel?.text = title
 
@@ -65,6 +67,9 @@ class NotesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //prints out 0,1,2
         print("section: \(indexPath.section)")
+        let index = indexPath.section
+        userDefaults.set(index, forKey: "index")
+        
 
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "newViewController")
