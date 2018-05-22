@@ -51,6 +51,16 @@ class NotesFullViewController: UIViewController {
         
         self.dismiss(animated: true, completion: nil)
     }
+    @IBAction func DeleteButton(_ sender: UIButton) {
+        
+        noteTitles.remove(at: index)
+        noteBodys.remove(at: index)
+        
+        userDefaults.set(noteTitles, forKey: "noteTitles")
+        userDefaults.set(noteBodys, forKey: "noteBodys")
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
