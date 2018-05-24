@@ -487,6 +487,7 @@
                         <outlet property="expenseCostTextField" destination="aLz-PN-oaX" id="QPj-Ha-Jxy"/>
                         <outlet property="expenseDatePicker" destination="KCW-6Z-vhl" id="B89-mM-pKj"/>
                         <outlet property="expenseNameTextField" destination="96d-bI-l2j" id="jB4-Rv-H4X"/>
+                        <outlet property="saveButton" destination="8om-xu-GjV" id="o1Z-qW-7Qc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WY3-c0-rsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -803,7 +804,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BfO-xN-FGi"/>
-        <segue reference="wtk-7T-x6v"/>
+        <segue reference="ccM-Z4-JRS"/>
         <segue reference="z9g-Di-MN8"/>
         <segue reference="46M-zf-44O"/>
     </inferredMetricsTieBreakers>
