@@ -24,7 +24,7 @@ class ExpensesViewController: UIViewController {
         super.viewDidLoad()
         fundsLeftLabel.text = "$00.00"
         expensesLabel.text = "$00.00"
-        budgetLabel.text = "$00.00"
+        budgetLabel.text = "$" + String(budget)
     }
     
     override func viewDidAppear(_ animated: Bool) {
