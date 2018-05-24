@@ -50,20 +50,23 @@ class ExpensesViewController: UIViewController {
         var expDouble: Double = 0.0
         var expArray: [Double] = []
         
-        var expenseCost = userDefaults.stringArray(forKey: "expenseCost")!
-        //expenseCost.remove(at: 0)
         
-        
-        if expenseCost.count >= 0 {
-            for e in expenseCost {
-                expDouble = Double(e)!
-                expArray.append(expDouble)
-                for exp in expArray {
-                    expenses += exp
+        if userDefaults.stringArray(forKey: "expenseCost") != nil {
+            var expenseCost = userDefaults.stringArray(forKey: "expenseCost")!
+            //expenseCost.remove(at: 0)
+            
+            if expenseCost.count >= 0 {
+                for e in expenseCost {
+                    expDouble = Double(e)!
+                    expArray.append(expDouble)
+                    for exp in expArray {
+                        expenses += exp
+                    }
+                    expArray.removeAll()
                 }
-                expArray.removeAll()
             }
         }
+        
         
         totalExpense = expenses
         expensesLabel.text = "$" + String(expenses)

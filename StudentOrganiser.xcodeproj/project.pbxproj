@@ -11,10 +11,10 @@
 		1DB7718320B272C600C506E3 /* NotesAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7718220B272C600C506E3 /* NotesAddViewController.swift */; };
 		1DB7718520B2733700C506E3 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7718420B2733700C506E3 /* NotesTableViewController.swift */; };
 		1DB7718720B27BE200C506E3 /* NotesFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB7718620B27BE200C506E3 /* NotesFullViewController.swift */; };
-		9F33C5BF20B6441000BEE400 /* ReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33C5BB20B6440F00BEE400 /* ReminderTableViewController.swift */; };
-		9F33C5C020B6441000BEE400 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33C5BC20B6440F00BEE400 /* ReminderViewController.swift */; };
-		9F33C5C120B6441000BEE400 /* ReminderFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33C5BD20B6440F00BEE400 /* ReminderFullViewController.swift */; };
-		9F33C5C220B6441000BEE400 /* ReminderAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33C5BE20B6441000BEE400 /* ReminderAddViewController.swift */; };
+		9F33C5C420B6480A00BEE400 /* ReminderAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33C5C320B6480A00BEE400 /* ReminderAddViewController.swift */; };
+		9F33C5C620B6482800BEE400 /* ReminderFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33C5C520B6482800BEE400 /* ReminderFullViewController.swift */; };
+		9F33C5C820B6484A00BEE400 /* ReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33C5C720B6484A00BEE400 /* ReminderTableViewController.swift */; };
+		9F33C5CA20B6485A00BEE400 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F33C5C920B6485A00BEE400 /* ReminderViewController.swift */; };
 		F2C051DD20B13B7F00726BDF /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C051DC20B13B7F00726BDF /* ExpensesViewController.swift */; };
 		F2C051DF20B13BB200726BDF /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C051DE20B13BB200726BDF /* AddExpenseViewController.swift */; };
 		F2C051E120B13BD200726BDF /* ExpenseListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C051E020B13BD200726BDF /* ExpenseListTableViewController.swift */; };
@@ -49,10 +49,10 @@
 		1DB7718220B272C600C506E3 /* NotesAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAddViewController.swift; sourceTree = "<group>"; };
 		1DB7718420B2733700C506E3 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		1DB7718620B27BE200C506E3 /* NotesFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesFullViewController.swift; sourceTree = "<group>"; };
-		9F33C5BB20B6440F00BEE400 /* ReminderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReminderTableViewController.swift; path = "../../../Downloads/Archive 2/ReminderTableViewController.swift"; sourceTree = "<group>"; };
-		9F33C5BC20B6440F00BEE400 /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReminderViewController.swift; path = "../../../Downloads/Archive 2/ReminderViewController.swift"; sourceTree = "<group>"; };
-		9F33C5BD20B6440F00BEE400 /* ReminderFullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReminderFullViewController.swift; path = "../../../Downloads/Archive 2/ReminderFullViewController.swift"; sourceTree = "<group>"; };
-		9F33C5BE20B6441000BEE400 /* ReminderAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReminderAddViewController.swift; path = "../../../Downloads/Archive 2/ReminderAddViewController.swift"; sourceTree = "<group>"; };
+		9F33C5C320B6480A00BEE400 /* ReminderAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderAddViewController.swift; sourceTree = "<group>"; };
+		9F33C5C520B6482800BEE400 /* ReminderFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderFullViewController.swift; sourceTree = "<group>"; };
+		9F33C5C720B6484A00BEE400 /* ReminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewController.swift; sourceTree = "<group>"; };
+		9F33C5C920B6485A00BEE400 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		F2C051DC20B13B7F00726BDF /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
 		F2C051DE20B13BB200726BDF /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		F2C051E020B13BD200726BDF /* ExpenseListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListTableViewController.swift; sourceTree = "<group>"; };
@@ -96,21 +96,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C43EB6B20B560E60074C6F0 /* Reminder View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				9F33C5BE20B6441000BEE400 /* ReminderAddViewController.swift */,
-				9F33C5BD20B6440F00BEE400 /* ReminderFullViewController.swift */,
-				9F33C5BB20B6440F00BEE400 /* ReminderTableViewController.swift */,
-				9F33C5BC20B6440F00BEE400 /* ReminderViewController.swift */,
-			);
-			path = "Reminder View Controller";
-			sourceTree = "<group>";
-		};
 		F2C6280720A919CA006AFFA1 = {
 			isa = PBXGroup;
 			children = (
-				2C43EB6B20B560E60074C6F0 /* Reminder View Controller */,
 				F2C6281220A919CE006AFFA1 /* StudentOrganiser */,
 				F2C6282720A919D3006AFFA1 /* StudentOrganiserTests */,
 				F2C6283220A919D3006AFFA1 /* StudentOrganiserUITests */,
@@ -144,6 +132,10 @@
 				1DB7718220B272C600C506E3 /* NotesAddViewController.swift */,
 				1DB7718420B2733700C506E3 /* NotesTableViewController.swift */,
 				1DB7718620B27BE200C506E3 /* NotesFullViewController.swift */,
+				9F33C5C320B6480A00BEE400 /* ReminderAddViewController.swift */,
+				9F33C5C520B6482800BEE400 /* ReminderFullViewController.swift */,
+				9F33C5C720B6484A00BEE400 /* ReminderTableViewController.swift */,
+				9F33C5C920B6485A00BEE400 /* ReminderViewController.swift */,
 			);
 			path = StudentOrganiser;
 			sourceTree = "<group>";
@@ -301,16 +293,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2C6281620A919CF006AFFA1 /* ViewController.swift in Sources */,
-				9F33C5C220B6441000BEE400 /* ReminderAddViewController.swift in Sources */,
 				1DB7718520B2733700C506E3 /* NotesTableViewController.swift in Sources */,
-				9F33C5C120B6441000BEE400 /* ReminderFullViewController.swift in Sources */,
 				F2C051E120B13BD200726BDF /* ExpenseListTableViewController.swift in Sources */,
-				9F33C5BF20B6441000BEE400 /* ReminderTableViewController.swift in Sources */,
+				9F33C5C620B6482800BEE400 /* ReminderFullViewController.swift in Sources */,
 				1DB7718120B2722400C506E3 /* NotesViewController.swift in Sources */,
 				1DB7718320B272C600C506E3 /* NotesAddViewController.swift in Sources */,
+				9F33C5C420B6480A00BEE400 /* ReminderAddViewController.swift in Sources */,
 				F2C051DF20B13BB200726BDF /* AddExpenseViewController.swift in Sources */,
+				9F33C5CA20B6485A00BEE400 /* ReminderViewController.swift in Sources */,
+				9F33C5C820B6484A00BEE400 /* ReminderTableViewController.swift in Sources */,
 				F2C6281420A919CF006AFFA1 /* AppDelegate.swift in Sources */,
-				9F33C5C020B6441000BEE400 /* ReminderViewController.swift in Sources */,
 				1DB7718720B27BE200C506E3 /* NotesFullViewController.swift in Sources */,
 				F2C051DD20B13B7F00726BDF /* ExpensesViewController.swift in Sources */,
 			);
