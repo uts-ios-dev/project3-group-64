@@ -17,7 +17,7 @@ class AddExpenseViewController: UIViewController {
     
     //Putting your variables up here so I can access them from both viewdidload and savebutton
     var expenseName: [String] = []
-    var expenseCost: [String] = ["test"]
+    var expenseCost: [String] = []
     var expenseDate: [String] = []
     let userDefaults = Foundation.UserDefaults.standard
         
