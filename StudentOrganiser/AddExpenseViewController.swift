@@ -14,6 +14,7 @@ class AddExpenseViewController: UIViewController {
     @IBOutlet weak var expenseCostTextField: UITextField!
     @IBOutlet weak var expenseDatePicker: UIDatePicker!
     
+    @IBOutlet weak var saveButton: UIButton!
     
     //Putting your variables up here so I can access them from both viewdidload and savebutton
     var expenseName: [String] = []
@@ -35,6 +36,12 @@ class AddExpenseViewController: UIViewController {
         if userDefaults.stringArray(forKey: "expenseDate") != nil {
             expenseDate = userDefaults.stringArray(forKey: "expenseDate")!
         }
+        
+        if (expenseNameTextField.text?.isEmpty)! && (expenseCostTextField.text?.isEmpty)! {
+            saveButton.isUserInteractionEnabled = false
+        }
+        //
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,12 +71,6 @@ class AddExpenseViewController: UIViewController {
         userDefaults.set(expenseName, forKey: "expenseName")
         userDefaults.set(expenseCost, forKey: "expenseCost")
         userDefaults.set(expenseDate, forKey: "expenseDate")
-        
-        if cost != "" {
-            let costDouble: Double = Double(expenseCostTextField.text!)!
-            userDefaults.set(costDouble, forKey: "cost")
-        }
-        
         
     }
     
