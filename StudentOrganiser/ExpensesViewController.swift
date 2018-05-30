@@ -50,8 +50,10 @@ class ExpensesViewController: UIViewController {
     
     @IBAction func saveBudget(_ sender: UIButton) {
         let budgetTemp = Double(budgetTextField.text!)!
+        userDefaults.set(budgetTemp, forKey: "budget")
+        
         budgetLabel.text = "$" + String(budgetTemp)
-        budget = budgetTemp
+        //budget = budgetTemp
         totalFundsLeft()
     }
     
@@ -88,13 +90,15 @@ class ExpensesViewController: UIViewController {
     }
     
     func setBudgetLabel() {
-        budgetLabel.text = "$" + String(budget)
+        let budgetUD: Double = userDefaults.double(forKey: "budget")
+        budgetLabel.text = "$" + String(budgetUD)
+        
     }
     
     func totalFundsLeft() {
         let total: Double = userDefaults.double(forKey: "totalCost")
-
-            fundsLeft = budget - total
-            fundsLeftLabel.text = "$" + String(fundsLeft)
+        let budgetTot: Double = userDefaults.double(forKey: "budget")
+        fundsLeft = budgetTot - total
+        fundsLeftLabel.text = "$" + String(fundsLeft)
     }
 }
