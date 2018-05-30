@@ -37,9 +37,9 @@ class AddExpenseViewController: UIViewController {
             expenseDate = userDefaults.stringArray(forKey: "expenseDate")!
         }
         
-        if (expenseNameTextField.text?.isEmpty)! && (expenseCostTextField.text?.isEmpty)! {
-            saveButton.isUserInteractionEnabled = false
-        }
+//        if (expenseNameTextField.text?.isEmpty)! && (expenseCostTextField.text?.isEmpty)! {
+//            saveButton.isUserInteractionEnabled = false
+//        }
         //
         
     }
@@ -56,6 +56,15 @@ class AddExpenseViewController: UIViewController {
         return dateString
     }
     
+    //Set user defaults for total costs
+    func totalCosts(s : String) {
+        let newCost: Double = Double(s)!
+        let oldTotal: Double = userDefaults.double(forKey: "totalCost")
+        
+        let updatedTotal: Double = oldTotal + newCost
+        userDefaults.set(updatedTotal, forKey: "totalCost")
+    }
+        
     @IBAction func saveButton(_ sender: UIButton) {
       
         //I dont know why but you have to do it like this. Seperately.
@@ -71,7 +80,7 @@ class AddExpenseViewController: UIViewController {
         userDefaults.set(expenseName, forKey: "expenseName")
         userDefaults.set(expenseCost, forKey: "expenseCost")
         userDefaults.set(expenseDate, forKey: "expenseDate")
-        
+        totalCosts(s: cost)
     }
     
 }

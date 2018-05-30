@@ -45,38 +45,42 @@ class ExpensesViewController: UIViewController {
     }
     
     func totalExpenses() {
+//
+//        var expenses: Double = 0.0
+//        var expDouble: Double = 0.0
+//        var expArray: [Double] = []
+//
+//
+//        if userDefaults.stringArray(forKey: "expenseCost") != nil {
+//            var expenseCost = userDefaults.stringArray(forKey: "expenseCost")!
+//            //expenseCost.remove(at: 0)
+//
+//            if expenseCost.count >= 0 {
+//                for e in expenseCost {
+//                    expDouble = Double(e)!
+//                    expArray.append(expDouble)
+//                    for exp in expArray {
+//                        expenses += exp
+//                    }
+//                    expArray.removeAll()
+//                }
+//            }
+//        }
+//
+//
+//        totalExpense = expenses
+//        expensesLabel.text = "$" + String(expenses)
         
-        var expenses: Double = 0.0
-        var expDouble: Double = 0.0
-        var expArray: [Double] = []
-        
-        
-        if userDefaults.stringArray(forKey: "expenseCost") != nil {
-            var expenseCost = userDefaults.stringArray(forKey: "expenseCost")!
-            //expenseCost.remove(at: 0)
-            
-            if expenseCost.count >= 0 {
-                for e in expenseCost {
-                    expDouble = Double(e)!
-                    expArray.append(expDouble)
-                    for exp in expArray {
-                        expenses += exp
-                    }
-                    expArray.removeAll()
-                }
-            }
-        }
-        
-        
-        totalExpense = expenses
-        expensesLabel.text = "$" + String(expenses)
+        let total: Double = userDefaults.double(forKey: "totalCost")
+        expensesLabel.text = "$" + String(total)
         
     }
     
     func totalFundsLeft() {
-        
+        let total: Double = userDefaults.double(forKey: "totalCost")
+
 //        if budget != 0 {
-            fundsLeft = budget - totalExpense
+            fundsLeft = budget - total
             fundsLeftLabel.text = "$" + String(fundsLeft)
         //}
         
