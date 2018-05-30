@@ -24,11 +24,21 @@ class ExpensesViewController: UIViewController {
         super.viewDidLoad()
         fundsLeftLabel.text = "$00.00"
         expensesLabel.text = "$00.00"
-        budgetLabel.text = "$" + String(budget)
+        if budget == 0.0 {
+            budgetLabel.text = "$00.00"
+        } else {
+            setBudgetLabel()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        budgetLabel.text = "$" + String(budget)
+        setBudgetLabel()
+        totalExpenses()
+        totalFundsLeft()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setBudgetLabel()
         totalExpenses()
         totalFundsLeft()
     }
@@ -39,8 +49,9 @@ class ExpensesViewController: UIViewController {
     }
     
     @IBAction func saveBudget(_ sender: UIButton) {
-        budget = Double(budgetTextField.text!)!
-        budgetLabel.text = "$" + String(budget)
+        let budgetTemp = Double(budgetTextField.text!)!
+        budgetLabel.text = "$" + String(budgetTemp)
+        budget = budgetTemp
         totalFundsLeft()
     }
     
@@ -76,17 +87,14 @@ class ExpensesViewController: UIViewController {
         
     }
     
+    func setBudgetLabel() {
+        budgetLabel.text = "$" + String(budget)
+    }
+    
     func totalFundsLeft() {
         let total: Double = userDefaults.double(forKey: "totalCost")
 
-//        if budget != 0 {
             fundsLeft = budget - total
             fundsLeftLabel.text = "$" + String(fundsLeft)
-        //}
-        
     }
-    
-    
-    
-    
 }
