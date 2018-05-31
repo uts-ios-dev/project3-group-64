@@ -30,15 +30,12 @@ class ReminderTableViewController: UITableViewController {
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return reminderTitles.count
@@ -52,7 +49,6 @@ class ReminderTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reminderTitleCell", for: indexPath)
         
         let title = reminderTitles[indexPath.section]
-        
         
         cell.textLabel?.text = title
         

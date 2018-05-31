@@ -13,9 +13,7 @@ class AddExpenseViewController: UIViewController {
     @IBOutlet weak var expenseNameTextField: UITextField!
     @IBOutlet weak var expenseCostTextField: UITextField!
     @IBOutlet weak var expenseDatePicker: UIDatePicker!
-    
     @IBOutlet weak var saveButton: UIButton!
-    
     var expenseName: [String] = []
     var expenseCost: [String] = []
     var expenseDate: [String] = []
@@ -45,6 +43,7 @@ class AddExpenseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //Reads UIDatePicker
     func dateChanged(_ sender: UIDatePicker) -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/YYYY"
@@ -60,7 +59,8 @@ class AddExpenseViewController: UIViewController {
         let updatedTotal: Double = oldTotal + newCost
         userDefaults.set(updatedTotal, forKey: "totalCost")
     }
-        
+    
+    //Saves the expense
     @IBAction func saveButton(_ sender: UIButton) {
       
         let name = expenseNameTextField.text!

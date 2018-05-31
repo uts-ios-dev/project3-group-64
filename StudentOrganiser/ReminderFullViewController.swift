@@ -39,8 +39,8 @@ class ReminderFullViewController: UIViewController {
         }
         
         index = userDefaults.integer(forKey: "Rindex")
-
     }
+    
     @IBAction func SaveReminder(_ sender: UIButton) {
         reminderTitles[index] = titleLabel.text!
         reminderBodys[index] = bodyField.text
@@ -50,6 +50,7 @@ class ReminderFullViewController: UIViewController {
         
         self.dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func DeleteButton(_ sender: UIButton) {
         
         reminderTitles.remove(at: index)

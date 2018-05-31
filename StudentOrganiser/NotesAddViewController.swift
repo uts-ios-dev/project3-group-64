@@ -36,6 +36,7 @@ class NotesAddViewController: UIViewController {
 
     }
     
+    //Adds note
     @IBAction func AddNote(_ sender: UIButton) {
        
         let title = noteTitle.text!
@@ -50,7 +51,7 @@ class NotesAddViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
+    //Segues back to previous page
     @IBAction func BackButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
         

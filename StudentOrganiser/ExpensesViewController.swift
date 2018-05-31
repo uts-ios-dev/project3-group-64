@@ -56,6 +56,7 @@ class ExpensesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //Saves budget
     @IBAction func saveBudget(_ sender: UIButton) {
         let budgetTemp = Double(budgetTextField.text!)!
         userDefaults.set(budgetTemp, forKey: "budget")
@@ -64,18 +65,21 @@ class ExpensesViewController: UIViewController {
         totalFundsLeft()
     }
     
+    //Displays total expenses
     func totalExpenses() {
         let total: Double = userDefaults.double(forKey: "totalCost")
         expensesLabel.text = "$" + String(total)
         
     }
     
+    //Sets the budget label
     func setBudgetLabel() {
         let budgetUD: Double = userDefaults.double(forKey: "budget")
         budgetLabel.text = "$" + String(budgetUD)
         
     }
     
+    //Calculates the funds left
     func totalFundsLeft() {
         let total: Double = userDefaults.double(forKey: "totalCost")
         let budgetTot: Double = userDefaults.double(forKey: "budget")

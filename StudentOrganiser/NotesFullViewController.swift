@@ -12,7 +12,7 @@ class NotesFullViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UITextField!
     @IBOutlet weak var bodyField: UITextView!
-     let userDefaults = Foundation.UserDefaults.standard
+    let userDefaults = Foundation.UserDefaults.standard
     var index = 0
     
     var noteTitles:[String] = []
@@ -24,7 +24,7 @@ class NotesFullViewController: UIViewController {
         
         titleLabel.text = noteTitles[index]
         bodyField.text = noteBodys[index]
-            }
+    }
     
     func getData(){
         if userDefaults.stringArray(forKey: "noteTitles") != nil {

@@ -18,12 +18,13 @@ class NotesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getTitles()
-        //print("view did load")// NOT LOADING VIEW EACH TIME IT OPENS
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         getTitles()
     }
- 
+    
+    //Gets note titles
     func getTitles() {
         if userDefaults.stringArray(forKey: "noteTitles") != nil {
             noteTitles = userDefaults.stringArray(forKey: "noteTitles")!
@@ -51,8 +52,7 @@ class NotesTableViewController: UITableViewController {
 
         let title = noteTitles[indexPath.section]
         
-
-       cell.textLabel?.text = title
+        cell.textLabel?.text = title
 
         return cell
     }
