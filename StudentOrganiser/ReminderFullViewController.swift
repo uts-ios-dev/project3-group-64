@@ -11,6 +11,8 @@ import UIKit
 class ReminderFullViewController: UIViewController {
     @IBOutlet weak var titleLabel: UITextField!
     @IBOutlet weak var bodyField: UITextView!
+    @IBOutlet weak var deleteNoteButton: UIButton!
+    @IBOutlet weak var saveChangesButton: UIButton!
     let userDefaults = Foundation.UserDefaults.standard
     var index = 0
     
@@ -20,6 +22,9 @@ class ReminderFullViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
+        
+        deleteNoteButton.layer.cornerRadius = 5
+        saveChangesButton.layer.cornerRadius = 5
         
         titleLabel.text = reminderTitles[index]
         bodyField.text = reminderBodys[index]
@@ -32,10 +37,9 @@ class ReminderFullViewController: UIViewController {
         if userDefaults.stringArray(forKey: "reminderBodys") != nil {
             reminderBodys = userDefaults.stringArray(forKey: "reminderBodys")!
         }
-        //if userDefaults.integer(forKey: "Rindex") != nil {
+        
         index = userDefaults.integer(forKey: "Rindex")
-        //  print("herreeeeeee")
-        //}
+
     }
     @IBAction func SaveReminder(_ sender: UIButton) {
         reminderTitles[index] = titleLabel.text!

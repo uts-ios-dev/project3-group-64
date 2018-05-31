@@ -15,6 +15,10 @@ class ReminderAddViewController: UIViewController {
     @IBOutlet weak var reminderSwitch: UISwitch!
     @IBOutlet weak var reminderDate: UIDatePicker!
     
+    
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    
     var reminderTitles:[String] = []
     var reminderBodys:[String] = []
     var reminderDates = NSDate()
@@ -41,7 +45,8 @@ class ReminderAddViewController: UIViewController {
             reminderBodys = userDefaults.stringArray(forKey: "reminderBodys")!
         }
         
-        
+        saveButton.layer.cornerRadius = 5
+        cancelButton.layer.cornerRadius = 5
         
     }
     

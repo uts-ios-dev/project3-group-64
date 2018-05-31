@@ -14,6 +14,9 @@ class ExpensesViewController: UIViewController {
     @IBOutlet weak var fundsLeftLabel: UILabel!
     @IBOutlet weak var expensesLabel: UILabel!
     @IBOutlet weak var budgetTextField: UITextField!
+    @IBOutlet weak var saveBudgetButton: UIButton!
+    @IBOutlet weak var addExpenseButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     var budget: Double = 0.00
     var fundsLeft: Double = 0.00
     var totalExpense: Double = 0.00
@@ -29,6 +32,11 @@ class ExpensesViewController: UIViewController {
         } else {
             setBudgetLabel()
         }
+        
+        saveBudgetButton.layer.cornerRadius = 5
+        addExpenseButton.layer.cornerRadius = 5
+        backButton.layer.cornerRadius = 5
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,37 +61,10 @@ class ExpensesViewController: UIViewController {
         userDefaults.set(budgetTemp, forKey: "budget")
         
         budgetLabel.text = "$" + String(budgetTemp)
-        //budget = budgetTemp
         totalFundsLeft()
     }
     
     func totalExpenses() {
-//
-//        var expenses: Double = 0.0
-//        var expDouble: Double = 0.0
-//        var expArray: [Double] = []
-//
-//
-//        if userDefaults.stringArray(forKey: "expenseCost") != nil {
-//            var expenseCost = userDefaults.stringArray(forKey: "expenseCost")!
-//            //expenseCost.remove(at: 0)
-//
-//            if expenseCost.count >= 0 {
-//                for e in expenseCost {
-//                    expDouble = Double(e)!
-//                    expArray.append(expDouble)
-//                    for exp in expArray {
-//                        expenses += exp
-//                    }
-//                    expArray.removeAll()
-//                }
-//            }
-//        }
-//
-//
-//        totalExpense = expenses
-//        expensesLabel.text = "$" + String(expenses)
-        
         let total: Double = userDefaults.double(forKey: "totalCost")
         expensesLabel.text = "$" + String(total)
         

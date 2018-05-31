@@ -83,6 +83,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="budgetPlanButton" destination="gdm-26-j6z" id="a9Q-lg-U94"/>
+                        <outlet property="notesButton" destination="9SB-2R-FAy" id="VCx-qY-yw0"/>
+                        <outlet property="reminderButton" destination="KiS-Dc-r5T" id="wBF-cz-VlR"/>
+                        <outlet property="resetButton" destination="383-cW-NsM" id="7Tf-Rz-tSz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -222,7 +228,7 @@
                                 <rect key="frame" x="0.0" y="585" width="375" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1333333333" green="0.4549019608" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Add note">
+                                <state key="normal" title="Add Notes">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -411,10 +417,13 @@
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addExpenseButton" destination="xUk-Px-Ccc" id="cWs-ah-HGi"/>
+                        <outlet property="backButton" destination="aK7-Gb-5cb" id="WiT-Dc-P34"/>
                         <outlet property="budgetLabel" destination="LSw-kZ-vkg" id="pHc-G3-VxV"/>
                         <outlet property="budgetTextField" destination="KWh-fA-Gbq" id="gqi-hA-Xyf"/>
                         <outlet property="expensesLabel" destination="uvQ-rY-Wwe" id="Q2Y-a7-tsa"/>
                         <outlet property="fundsLeftLabel" destination="8hv-3P-LfD" id="mms-1i-8cZ"/>
+                        <outlet property="saveBudgetButton" destination="0Nf-Pf-047" id="wYf-Rn-S0h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nYm-FB-HxH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -668,10 +677,12 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="cancelButton" destination="YPJ-Fo-BQs" id="PRz-p1-2Jd"/>
                         <outlet property="reminderBody" destination="Hwi-3v-pUE" id="SPt-3s-vsU"/>
                         <outlet property="reminderDate" destination="fnY-J5-Q4K" id="cm5-Du-Tzq"/>
                         <outlet property="reminderSwitch" destination="10R-2f-6kb" id="ZpK-EC-om0"/>
                         <outlet property="reminderTitle" destination="ntZ-TH-xdN" id="pgw-Zm-NbH"/>
+                        <outlet property="saveButton" destination="rtz-Nh-sjF" id="edQ-PJ-zPJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Jr-OJ-7VH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -709,7 +720,7 @@
                                 <rect key="frame" x="16" y="546" width="343" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1333333333" green="0.4549019608" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Delete Note">
+                                <state key="normal" title="Delete Reminder">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -749,6 +760,8 @@
                     <navigationItem key="navigationItem" title="Title" id="3nb-Of-0f4"/>
                     <connections>
                         <outlet property="bodyField" destination="nLx-oC-t7m" id="851-J1-oNm"/>
+                        <outlet property="deleteNoteButton" destination="3RA-Si-AuN" id="B7s-Ml-ZpE"/>
+                        <outlet property="saveChangesButton" destination="EMe-SM-FVu" id="B35-bb-Zme"/>
                         <outlet property="titleLabel" destination="v5H-re-jZX" id="UKc-CI-kTX"/>
                     </connections>
                 </viewController>
@@ -839,8 +852,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BfO-xN-FGi"/>
-        <segue reference="wtk-7T-x6v"/>
-        <segue reference="z9g-Di-MN8"/>
+        <segue reference="ccM-Z4-JRS"/>
+        <segue reference="p3Q-FY-azi"/>
         <segue reference="8sK-OW-cQd"/>
     </inferredMetricsTieBreakers>
 </document>

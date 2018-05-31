@@ -9,12 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var budgetPlanButton: UIButton!
+    @IBOutlet weak var notesButton: UIButton!
+    @IBOutlet weak var reminderButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        budgetPlanButton.layer.cornerRadius = 5
+        notesButton.layer.cornerRadius = 5
+        reminderButton.layer.cornerRadius = 5
+        resetButton.layer.cornerRadius = 5
     }
-    //test comment
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
