@@ -491,7 +491,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8om-xu-GjV">
-                                <rect key="frame" x="16" y="548" width="343" height="41"/>
+                                <rect key="frame" x="16" y="529" width="343" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1333333333" green="0.4549019608" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Save Expense">
@@ -499,7 +499,26 @@
                                 </state>
                                 <connections>
                                     <action selector="saveButton:" destination="zYt-fs-pyk" eventType="touchUpInside" id="cQb-HD-avQ"/>
-                                    <segue destination="VRx-mc-DeO" kind="presentation" id="ccM-Z4-JRS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8L-Iu-00D">
+                                <rect key="frame" x="63" y="500" width="248" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.12256115240100107" blue="0.11747781801699098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gX-HE-a0b">
+                                <rect key="frame" x="16" y="570" width="343" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.4549019608" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="zYt-fs-pyk" eventType="touchUpInside" id="r1H-zs-7Tk"/>
+                                    <action selector="saveButton:" destination="zYt-fs-pyk" eventType="touchUpInside" id="qBR-uY-r9Q"/>
+                                    <segue destination="VRx-mc-DeO" kind="presentation" id="Qm5-nK-U3V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -517,11 +536,12 @@
                         <outlet property="expenseDatePicker" destination="KCW-6Z-vhl" id="B89-mM-pKj"/>
                         <outlet property="expenseNameTextField" destination="96d-bI-l2j" id="jB4-Rv-H4X"/>
                         <outlet property="saveButton" destination="8om-xu-GjV" id="o1Z-qW-7Qc"/>
+                        <outlet property="warningLabel" destination="k8L-Iu-00D" id="iBW-HX-ZzZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WY3-c0-rsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-684" y="1395"/>
+            <point key="canvasLocation" x="-684" y="1394.7526236881561"/>
         </scene>
         <!--Notes Add View Controller-->
         <scene sceneID="W7L-OY-wma">
@@ -852,7 +872,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BfO-xN-FGi"/>
-        <segue reference="wtk-7T-x6v"/>
+        <segue reference="Qm5-nK-U3V"/>
         <segue reference="z9g-Di-MN8"/>
         <segue reference="8sK-OW-cQd"/>
     </inferredMetricsTieBreakers>

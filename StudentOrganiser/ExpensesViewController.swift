@@ -58,11 +58,14 @@ class ExpensesViewController: UIViewController {
     
     //Saves budget
     @IBAction func saveBudget(_ sender: UIButton) {
-        let budgetTemp = Double(budgetTextField.text!)!
-        userDefaults.set(budgetTemp, forKey: "budget")
+        if budgetTextField.text != "" {
+            let budgetTemp = Double(budgetTextField.text!)!
+            userDefaults.set(budgetTemp, forKey: "budget")
+            
+            budgetLabel.text = "$" + String(budgetTemp)
+            totalFundsLeft()
+        }
         
-        budgetLabel.text = "$" + String(budgetTemp)
-        totalFundsLeft()
     }
     
     //Displays total expenses
